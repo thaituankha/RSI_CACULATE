@@ -1,0 +1,7 @@
+vnstock
+pandas
+numpy
+ta-lib
+matplotlib
+plotly
+streamlit
