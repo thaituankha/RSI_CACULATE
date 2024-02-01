@@ -1,6 +1,5 @@
 #import thư viện
 import streamlit as st
-from vnstock import *
 import pandas as pd
 import numpy as np 
 import talib
