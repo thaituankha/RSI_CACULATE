@@ -1,7 +1,5 @@
-vnstock
 pandas
 numpy
-pandas-ta
 matplotlib
 plotly
 streamlit
