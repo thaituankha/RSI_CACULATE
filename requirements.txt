@@ -1,7 +1,7 @@
 vnstock
 pandas
 numpy
-ta-lib
+pandas-ta
 matplotlib
 plotly
 streamlit
