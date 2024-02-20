@@ -33,7 +33,7 @@ st.plotly_chart(fig)
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['OB'], mode='lines', name='quá mua'))
 fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['OS'], mode='lines', name='quá bán'))
-fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['VNINDEX'], mode='lines', name='VNINDEX', yaxis='y2'))
+#fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['VNINDEX'], mode='lines', name='VNINDEX', yaxis='y2'))
 fig.update_layout(
     title='Tỷ lệ quá mua/quá bán trên tổng quá mua, quá bán và VNINDEX',
     xaxis=dict(title='Thời gian'),
