@@ -11,7 +11,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 data_final =pd.read_excel('caculate_OB_OS_RSI.xlsx')
-data_final['OB-OS'] = data_final['RSI_OB'] - data_final['RSI_OS']
+data_final['OB'] = data_final['RSI_OB_number'] / (data_final['RSI_OB_number']+data_final['RSI_OS_number'])
+data_final['OS'] = data_final['RSI_OS_number'] / (data_final['RSI_OB_number']+data_final['RSI_OS_number'])
 
 st.dataframe(data_final)
 
@@ -30,10 +31,11 @@ st.plotly_chart(fig)
 
 
 fig = go.Figure()
-fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['OB-OS'], mode='lines', name='quá mua trừ quá bán'))
+fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['OB'], mode='lines', name='quá mua'))
+fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['OS'], mode='lines', name='quá bán')
 fig.add_trace(go.Scatter(x=data_final['date'], y=data_final['VNINDEX'], mode='lines', name='VNINDEX', yaxis='y2'))
 fig.update_layout(
-    title='OB - OS và VNINDEX',
+    title='Tỷ lệ quá mua/quá bán trên tổng quá mua, quá bán và VNINDEX',
     xaxis=dict(title='Thời gian'),
     yaxis=dict(title='%'),
     yaxis2=dict(title='VNINDEX', overlaying='y', side='right'),
