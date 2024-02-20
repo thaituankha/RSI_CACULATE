@@ -49,7 +49,7 @@ data_SMA_200 = pd.read_csv('data_SMA200.csv')
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=data_SMA_200['date'], y=data_SMA_200['% CP có giá trên SMA200'], mode='lines', name='% CP có giá trên SMA200', line=dict(color='green')))
 fig.add_trace(go.Scatter(x=data_SMA_200['date'], y=data_SMA_200['% CP có giá dưới SMA200'], mode='lines', name='% CP có giá dưới SMA200', line=dict(color='red')))
-fig.add_trace(go.Scatter(x=data_SMA_200['date'], y=data_SMA_200['index'], mode='lines', name='Vnindex', yaxis='y2', line=dict(color='blue')))
+#fig.add_trace(go.Scatter(x=data_SMA_200['date'], y=data_SMA_200['index'], mode='lines', name='Vnindex', yaxis='y2', line=dict(color='blue')))
 fig.update_layout(
     title='SMA200',
     xaxis=dict(title='Thời gian'),
